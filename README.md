@@ -158,9 +158,9 @@ Nesta primeira etapa, vocês irão explorar como uma sequência de bits pode ser
 4. **Experimentem com diferentes sequências** de bits modificando os dados de entrada
 
 📖  **Questões para reflexão** 
-- Quantos tons diferentes vocês conseguem distinguir?
-- É possível identificar qual tom representa 0 e qual representa 1?
-- O que acontece quando há muitos bits iguais consecutivos?
+- Quantos tons diferentes vocês conseguem distinguir? Resposta: Dois tons, um mais grave (sinal baixo) e um mais agudo (sinal alto)
+- É possível identificar qual tom representa 0 e qual representa 1? Resposta: Sim, o tom que representa o 0 é o sinal mais grave e o que significa 1 o mais agudo
+- O que acontece quando há muitos bits iguais consecutivos? Resposta: É mais custoso identificar os bits já que o som parecido entre eles gera uma dificuldade na interpretação
 
 ### **Etapa 2**: Decodificação/Demodulação de Dados
 
@@ -173,15 +173,15 @@ Agora vocês irão trabalhar no processo inverso: como recuperar os dados origin
 4. **Testem com diferentes mensagens** para verificar a eficácia do sistema
 
 🔎❓ **Perguntas para investigar** 
-- **Q2.1** : Que fatores podem afetar a qualidade da decodificação?
-- **Q2.2** : O que acontece se a taxa de transmissão for muito alta?
-- **Q2.3** : Como o sistema decide se a frequências representa '0' ou '1'? (observe os codigos)
+- **Q2.1** : Que fatores podem afetar a qualidade da decodificação? Resposta: A qualidade da decodificação pode ser afetada por diversos fatores, como a qualidade do sinal, que pode ser afetada pela distância por exemplo, os ruídos presentes, perda de dados, erros na transmissão.
+- **Q2.2** : O que acontece se a taxa de transmissão for muito alta? Resposta: uma taxa de transmissão muito alta aumenta a qualidade do sinal passado.
+- **Q2.3** : Como o sistema decide se a frequências representa '0' ou '1'? (observe os codigos) Resposta: Como descrito na função frequency_to_bit, a frequência for maior que 660Hz temos o bit 1, se não o bit é 0.
 
 🔓🔎 **Análise de modulação**
 - Busquem pelo o arquivo de audio com a sua mátricula no diretorio [dados_codificados](./dados_codificados/) e respondas as seguintes questões:
-    - **A2.1** : Qual a modulação foi utilizada?
-    - **A2.2** : Qual o número de bits na menssagem
-    - **A2.3** : Qual a menssagem enviada? 
+    - **A2.1** : Qual a modulação foi utilizada? Resposta: Frequency-Shift Keying (FSK)
+    - **A2.2** : Qual o número de bits na menssagem Resposta: 22 bits
+    - **A2.3** : Qual a menssagem enviada? Resposta: 0010010001111001000011
 
 > Vocês tem até 3 dias apos o labotario ser explicado para verificar se a sua menssagem esta codificada corretamente!
 
@@ -202,8 +202,8 @@ Nesta etapa, vocês irão experimentar um dos maiores desafios em comunicações
 
 🔎❓**Análise crítica**:
 - **A3.1** : Utilizando a sua menssagem da Etapa 2. A partir de que nível de ruído, para cada modulação, o sistema começa a falhar? 
-    - a) Identifique o valor de SNR onde os primeiros bits são comprometidos
-    - b) Identifique o valor de SNR onde os primeiros todos os bits são comprometidos
+    - a) Identifique o valor de SNR onde os primeiros bits são comprometidos Resposta: -35db
+    - b) Identifique o valor de SNR onde os primeiros todos os bits são comprometidos Resposta: -40db
     - Utilize graficos para ilustrar os resultados onde o eixo x representa o valor de SNR e o y o número de erros
 
 > Responda o item A3.1 como um relátorio utilize os graficos para explicar os seus achados
@@ -220,8 +220,8 @@ O que vocês irão fazer:
 4. **Experimentem diferentes condições**: ruído ambiente
 
 🔓 **Perguntas para investigar** 
-- **Q4.1** : Qual foi a menssagem enviada enviada no arquivo `dados_ar.wav`?
-- **Q4.2** : Quantas reproduções (vezes) foram necessarias para decodificar a menssagem completa?
+- **Q4.1** : Qual foi a menssagem enviada enviada no arquivo `dados_ar.wav`? Resposta: 10110
+- **Q4.2** : Quantas reproduções (vezes) foram necessarias para decodificar a menssagem completa? Resposta: 9 vezes
 
 
 
